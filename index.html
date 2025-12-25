@@ -11,17 +11,18 @@
       <div class="input-container">
         <div class="input">
           <label>Hourly Wage</label><br />
-          <input type="number" min="1" /><br />
+          <input type="number" min="1" id="wage"/><br />
           <label>Item Price</label><br />
-          <input type="number" min="1" /><br />
+          <input type="number" min="1" id="price"/><br />
           <label>Investment Years</label><br />
-          <input type="number" min="1" /><br />
+          <input type="number" min="1" id="years"/><br />
           <input type="checkbox" id="toggle-switch" />
           <label>Is this a subscription?</label>
         </div>
         <div class="typeOfExpense">
           <label for="field">Choose a field</label>
           <select id="field" name="field">
+            <option value="field selector" selected>No field selected</option>
             <option value="tech">Tech</option>
             <option value="home">home</option>
           </select>
