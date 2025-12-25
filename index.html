@@ -15,10 +15,10 @@
       <div class="input-container">
         <h2>Parameters</h2>
         <div class="input">
-          <label>Hourly Wage ($)</label>
+          <label>Hourly Wage ₹</label>
           <input type="number" min="1" id="wage" placeholder="e.g. 25" />
 
-          <label>Item Price ($)</label>
+          <label>Item Price ₹</label>
           <input type="number" min="1" id="price" placeholder="e.g. 1000" />
 
           <label>Investment Years</label>
@@ -56,15 +56,14 @@
 
         <div class="result-hours-box">
           <h3>Future Wealth Opportunity</h3>
-          <div class="wealth-output" id="wealth-display">$0.00</div>
+          <div class="wealth-output" id="wealth-display">₹0.00</div>
         </div>
 
         <div class="visuals">
           <h3>Projection Graph</h3>
           <div class="graph">
-            <div class="bar" style="height: 40%"></div>
-            <div class="bar" style="height: 60%"></div>
-            <div class="bar" style="height: 80%"></div>
+            <div class="bar" id="bar-cost" title="Cost"></div>
+            <div class="bar" id="bar-wealth" title="Future Wealth"></div>
           </div>
         </div>
       </div>
