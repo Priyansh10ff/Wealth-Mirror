@@ -3,30 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Wealth Calculator</title>
   </head>
   <body>
     <div class="cont">
       <div class="input-container">
+        <h2>Parameters</h2>
         <div class="input">
-          <label>Hourly Wage</label><br />
-          <input type="number" min="1" id="wage"/><br />
-          <label>Item Price</label><br />
-          <input type="number" min="1" id="price"/><br />
-          <label>Investment Years</label><br />
-          <input type="number" min="1" id="years"/><br />
-          <input type="checkbox" id="toggle-switch" />
-          <label>Is this a subscription?</label>
+          <label>Hourly Wage ($)</label>
+          <input type="number" min="1" id="wage" placeholder="e.g. 25" />
+
+          <label>Item Price ($)</label>
+          <input type="number" min="1" id="price" placeholder="e.g. 1000" />
+
+          <label>Investment Years</label>
+          <input type="number" min="1" id="years" placeholder="e.g. 10" />
+
+          <div class="toggle-wrapper">
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch">Is this a subscription?</label>
+          </div>
         </div>
+
         <div class="typeOfExpense">
           <label for="field">Choose a field</label>
           <select id="field" name="field">
-            <option value="field selector" selected>No field selected</option>
+            <option value="field selector" selected disabled>
+              Select Category
+            </option>
             <option value="tech">Tech</option>
-            <option value="home">home</option>
+            <option value="home">Home</option>
+            <option value="lifestyle">Lifestyle</option>
           </select>
         </div>
+
         <div class="buttons">
           <button id="calculate-btn">Calculate</button>
           <button id="reset-btn">Reset</button>
@@ -35,17 +50,22 @@
 
       <div class="display-container">
         <div class="result-hours-box">
-          <h3>Cost in life hours</h3>
-          <div class="hours-output">Waiting for your input...</div>
+          <h3>Cost in Life Hours</h3>
+          <div class="hours-output" id="hours-display">0 hours</div>
         </div>
 
         <div class="result-hours-box">
-          <h3>Future Wealth</h3>
-          <div class="wealth-output">Waiting for your input...</div>
+          <h3>Future Wealth Opportunity</h3>
+          <div class="wealth-output" id="wealth-display">$0.00</div>
         </div>
 
         <div class="visuals">
-          <div class="graph"></div>
+          <h3>Projection Graph</h3>
+          <div class="graph">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 80%"></div>
+          </div>
         </div>
       </div>
     </div>
